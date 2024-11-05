@@ -2,6 +2,7 @@
 import "@intergrav/dev.css";
 import "../styles/dcskywardmc.css";
 import Header from "../components/Header.astro";
+import { ViewTransitions } from 'astro:transitions';
 const { title, description } = Astro.props;
 const { dctheme } = Astro.props;
 ---
@@ -36,11 +37,14 @@ const { dctheme } = Astro.props;
 		<!-- Sitemap Link -->
 		<link rel="sitemap" href="/sitemap-index.xml" />
 
-		<!-- Stylesheets -->
+		<!-- View Transitions -->
+		<ViewTransitions />
 	</head>
-	<body>
+	<body transition:animate="none">
 		<Header />
-		<h1>{title}</h1>
-		<slot />
+		<div transition:animate="slide">
+			<h1>{title}</h1>
+			<slot />
+		</div>
 	</body>
 </html>
