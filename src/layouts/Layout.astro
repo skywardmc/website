@@ -2,6 +2,7 @@
 import "@intergrav/dev.css";
 import "../styles/dcskywardmc.css";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import { ViewTransitions } from 'astro:transitions';
 const { title, description } = Astro.props;
 const { dctheme } = Astro.props;
@@ -46,5 +47,6 @@ const { dctheme } = Astro.props;
 			<h1>{title}</h1>
 			<slot />
 		</div>
+		<Footer />
 	</body>
 </html>
