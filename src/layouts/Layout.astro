@@ -1,5 +1,5 @@
 ---
-import DC from "@intergrav/dev.css";
+import DevCSS from "@intergrav/dev.css";
 import Header from "../components/Header.astro";
 const { title, description } = Astro.props;
 const { dctheme } = Astro.props;
@@ -36,7 +36,7 @@ const { dctheme } = Astro.props;
 		<link rel="sitemap" href="/sitemap-index.xml" />
 
 		<!-- Stylesheets -->
-		<link rel="stylesheet" href={DC}>
+		<link rel="stylesheet" href={DevCSS}>
 		{dctheme && <link rel="stylesheet" href={dctheme}>}
 	</head>
 	<body>
