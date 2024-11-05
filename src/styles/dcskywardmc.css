@@ -1,34 +1,34 @@
 /* theme for dev.css v3, a classless CSS framework - https://github.com/intergrav/dev.css */
-/* about: theme for SkywardMC's website, based on Catppuccin Mocha and Latte */
+/* about: theme for SkywardMC's website */
 
 :root {
 	/* light colors */
 	--dc-cs: light;
-	--dc-tx-1: #4c6469;
-	--dc-tx-2: #4c6169;
-	--dc-bg-1: #e6ecef;
-	--dc-bg-2: #eff3f5;
-	--dc-bg-3: #ccd5da;
-	--dc-lk-1: #2b8ebf;
-	--dc-lkb-1: #bcc7cc;
-	--dc-lkb-2: #ccd5da;
-	--dc-lkb-tx: #4c5e69;
-	--dc-ac-1: #2b89bf;
-	--dc-ac-tx: #eff3f5;
+	--dc-tx-1: #000000;
+	--dc-tx-2: #000000;
+	--dc-bg-1: #E8EEF1;
+	--dc-bg-2: #F1F4F6;
+	--dc-bg-3: #D1D9DE;
+	--dc-lk-1: #2780AC;
+	--dc-lkb-1: #C3CCD1;
+	--dc-lkb-2: #D1D9DE;
+	--dc-lkb-tx: #000000;
+	--dc-ac-1: #2780AC;
+	--dc-ac-tx: #F1F4F6;
 
 	/* dark colors */
 	--dc-d-cs: dark;
-	--dc-d-tx-1: #cde4f4;
-	--dc-d-tx-2: #cde7f4;
-	--dc-d-bg-1: #182125;
-	--dc-d-bg-2: #1e282e;
-	--dc-d-bg-3: #313e44;
-	--dc-d-lk-1: #89cffa;
-	--dc-d-lkb-1: #45525a;
-	--dc-d-lkb-2: #313d44;
-	--dc-d-lkb-tx: #cde6f4;
-	--dc-d-ac-1: #a6d8f7;
-	--dc-d-ac-tx: #1e272e;
+	--dc-d-tx-1: #DAEBF7;
+	--dc-d-tx-2: #DAEBF7;
+	--dc-d-bg-1: #12191C;
+	--dc-d-bg-2: #161E22;
+	--dc-d-bg-3: #252E33;
+	--dc-d-lk-1: #A7DBFB;
+	--dc-d-lkb-1: #343D43;
+	--dc-d-lkb-2: #252E33;
+	--dc-d-lkb-tx: #DAECF7;
+	--dc-d-ac-1: #A7DBFB;
+	--dc-d-ac-tx: #12191C;
 }
 
 @media (prefers-color-scheme: dark) {

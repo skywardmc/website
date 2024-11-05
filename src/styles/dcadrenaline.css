@@ -1,34 +1,34 @@
 /* theme for dev.css v3, a classless CSS framework - https://github.com/intergrav/dev.css */
-/* about: theme for Adrenaline's SkywardMC page, based on Catppuccin Mocha and Latte */
+/* about: theme for Adrenaline's SkywardMC page */
 
 :root {
 	/* light colors */
 	--dc-cs: light;
-	--dc-tx-1: #4c6958;
-	--dc-tx-2: #4c695e;
-	--dc-bg-1: #e6efe9;
-	--dc-bg-2: #eff5f3;
-	--dc-bg-3: #ccdad2;
-	--dc-lk-1: #27a769;
-	--dc-lkb-1: #bcccc3;
-	--dc-lkb-2: #ccdad3;
-	--dc-lkb-tx: #4c6958;
-	--dc-ac-1: #27a769;
-	--dc-ac-tx: #eff5f3;
+	--dc-tx-1: #000000;
+	--dc-tx-2: #000000;
+	--dc-bg-1: #E8F1EB;
+	--dc-bg-2: #F1F6F4;
+	--dc-bg-3: #D1DED6;
+	--dc-lk-1: #23975F;
+	--dc-lkb-1: #C3D1C9;
+	--dc-lkb-2: #D1DED7;
+	--dc-lkb-tx: #000000;
+	--dc-ac-1: #23975F;
+	--dc-ac-tx: #F1F6F4;
 
 	/* dark colors */
 	--dc-d-cs: dark;
-	--dc-d-tx-1: #cdf4e1;
-	--dc-d-tx-2: #cdf4e2;
-	--dc-d-bg-1: #18251f;
-	--dc-d-bg-2: #1e2e27;
-	--dc-d-bg-3: #31443b;
-	--dc-d-lk-1: #89faaf;
-	--dc-d-lkb-1: #455a4f;
-	--dc-d-lkb-2: #314439;
-	--dc-d-lkb-tx: #cdf4df;
-	--dc-d-ac-1: #a6f7be;
-	--dc-d-ac-tx: #1e2e25;
+	--dc-d-tx-1: #DAF7E9;
+	--dc-d-tx-2: #DAF7E9;
+	--dc-d-bg-1: #121C17;
+	--dc-d-bg-2: #16221D;
+	--dc-d-bg-3: #25332C;
+	--dc-d-lk-1: #A7FBC3;
+	--dc-d-lkb-1: #34433B;
+	--dc-d-lkb-2: #25332B;
+	--dc-d-lkb-tx: #DAF7E7;
+	--dc-d-ac-1: #A7FBC3;
+	--dc-d-ac-tx: #121C17;
 }
 
 @media (prefers-color-scheme: dark) {
