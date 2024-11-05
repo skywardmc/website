@@ -1,13 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import DCAdditive from "../../styles/dcadditive.css";
 import AdditiveInstallerCard from "../../components/AdditiveInstallerCard.astro";
 ---
 
 <Layout
 	title="Additive"
 	description="Additive is a simple, modern, open-source alternative to OptiFine in the form of a Minecraft modpack."
-	dctheme={DCAdditive}
 >
 	<p>
 		Additive is a simple, modern, open-source alternative to OptiFine for the
@@ -80,3 +78,7 @@ import AdditiveInstallerCard from "../../components/AdditiveInstallerCard.astro"
 	</p>
 	<AdditiveInstallerCard />
 </Layout>
+
+<style>
+	@import "../../styles/dcadditive.css";
+</style>

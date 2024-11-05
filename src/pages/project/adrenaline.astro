@@ -1,13 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import DCAdrenaline from "../../styles/dcadrenaline.css";
 import AdditiveInstallerCard from "../../components/AdditiveInstallerCard.astro";
 ---
 
 <Layout
 	title="Adrenaline"
 	description="Adrenaline is a lightweight Minecraft modpack that heavily improves FPS and logic performance through various optimization mods."
-	dctheme={DCAdrenaline}
 >
 	<p>
 		Adrenaline is a lightweight, open-source modpack that significantly improves
@@ -57,3 +55,7 @@ import AdditiveInstallerCard from "../../components/AdditiveInstallerCard.astro"
 	</p>
 	<AdditiveInstallerCard />
 </Layout>
+
+<style>
+	@import "../../styles/dcadrenaline.css";
+</style>
