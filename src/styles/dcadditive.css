@@ -1,0 +1,49 @@
+/* theme for dev.css v3, a classless CSS framework - https://github.com/intergrav/dev.css */
+/* about: theme for Additive's SkywardMC page, based on Catppuccin Mocha and Latte */
+
+:root {
+	/* light colors */
+	--dc-cs: light;
+	--dc-tx-1: #694c4c;
+	--dc-tx-2: #694c4c;
+	--dc-bg-1: #efe6e6;
+	--dc-bg-2: #f5efef;
+	--dc-bg-3: #dacccc;
+	--dc-lk-1: #bf2b2b;
+	--dc-lkb-1: #ccbcbc;
+	--dc-lkb-2: #dacccc;
+	--dc-lkb-tx: #694c4c;
+	--dc-ac-1: #bf2b2b;
+	--dc-ac-tx: #f5efef;
+
+	/* dark colors */
+	--dc-d-cs: dark;
+	--dc-d-tx-1: #f4cdcd;
+	--dc-d-tx-2: #f4cdcd;
+	--dc-d-bg-1: #251818;
+	--dc-d-bg-2: #2e1e1e;
+	--dc-d-bg-3: #443131;
+	--dc-d-lk-1: #fa8989;
+	--dc-d-lkb-1: #5a4545;
+	--dc-d-lkb-2: #443131;
+	--dc-d-lkb-tx: #f4cdcd;
+	--dc-d-ac-1: #f7a6a6;
+	--dc-d-ac-tx: #2e1e1e;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--dc-cs: var(--dc-d-cs);
+		--dc-tx-1: var(--dc-d-tx-1);
+		--dc-tx-2: var(--dc-d-tx-2);
+		--dc-bg-1: var(--dc-d-bg-1);
+		--dc-bg-2: var(--dc-d-bg-2);
+		--dc-bg-3: var(--dc-d-bg-3);
+		--dc-lk-1: var(--dc-d-lk-1);
+		--dc-lkb-1: var(--dc-d-lkb-1);
+		--dc-lkb-2: var(--dc-d-lkb-2);
+		--dc-lkb-tx: var(--dc-d-lkb-tx);
+		--dc-ac-1: var(--dc-d-ac-1);
+		--dc-ac-tx: var(--dc-d-ac-tx);
+	}
+}

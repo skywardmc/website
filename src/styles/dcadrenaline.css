@@ -1,0 +1,49 @@
+/* theme for dev.css v3, a classless CSS framework - https://github.com/intergrav/dev.css */
+/* about: theme for Adrenaline's SkywardMC page, based on Catppuccin Mocha and Latte */
+
+:root {
+	/* light colors */
+	--dc-cs: light;
+	--dc-tx-1: #4c6958;
+	--dc-tx-2: #4c695e;
+	--dc-bg-1: #e6efe9;
+	--dc-bg-2: #eff5f3;
+	--dc-bg-3: #ccdad2;
+	--dc-lk-1: #27a769;
+	--dc-lkb-1: #bcccc3;
+	--dc-lkb-2: #ccdad3;
+	--dc-lkb-tx: #4c6958;
+	--dc-ac-1: #27a769;
+	--dc-ac-tx: #eff5f3;
+
+	/* dark colors */
+	--dc-d-cs: dark;
+	--dc-d-tx-1: #cdf4e1;
+	--dc-d-tx-2: #cdf4e2;
+	--dc-d-bg-1: #18251f;
+	--dc-d-bg-2: #1e2e27;
+	--dc-d-bg-3: #31443b;
+	--dc-d-lk-1: #89faaf;
+	--dc-d-lkb-1: #455a4f;
+	--dc-d-lkb-2: #314439;
+	--dc-d-lkb-tx: #cdf4df;
+	--dc-d-ac-1: #a6f7be;
+	--dc-d-ac-tx: #1e2e25;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--dc-cs: var(--dc-d-cs);
+		--dc-tx-1: var(--dc-d-tx-1);
+		--dc-tx-2: var(--dc-d-tx-2);
+		--dc-bg-1: var(--dc-d-bg-1);
+		--dc-bg-2: var(--dc-d-bg-2);
+		--dc-bg-3: var(--dc-d-bg-3);
+		--dc-lk-1: var(--dc-d-lk-1);
+		--dc-lkb-1: var(--dc-d-lkb-1);
+		--dc-lkb-2: var(--dc-d-lkb-2);
+		--dc-lkb-tx: var(--dc-d-lkb-tx);
+		--dc-ac-1: var(--dc-d-ac-1);
+		--dc-ac-tx: var(--dc-d-ac-tx);
+	}
+}
