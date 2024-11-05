@@ -1,9 +1,9 @@
 ---
-import { Package, Download } from "lucide-astro";
+import { Tag, Download } from "lucide-astro";
 ---
 
 <div class="installerCard">
-	<Package />
+	<Tag />
 	<div>
 		<p>Additive Installer</p>
 		<p>
@@ -11,7 +11,8 @@ import { Package, Download } from "lucide-astro";
 				>v1.0.3</a
 			> - <a
 				href="https://github.com/skywardmc/additive-installer/commit/e82dab14ebd77ffc5d8dbf1d43f6ae99538d8f5d"
-				>e82dab1</a>
+				>e82dab1</a
+			>
 		</p>
 	</div>
 	<a
@@ -19,3 +20,50 @@ import { Package, Download } from "lucide-astro";
 		><button><Download /></button></a
 	>
 </div>
+
+<style>
+	.installerCard {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.75rem;
+		max-width: 24rem;
+		background-color: var(--dc-bg-2);
+		color: var(--dc-tx-1);
+		border: 1px solid var(--dc-bg-3);
+		border-radius: 1rem;
+	}
+
+	.installerCard button {
+		align-items: center;
+		width: 3rem;
+		min-width: 3rem;
+		height: 3rem;
+		padding: 0;
+		border-radius: 50%;
+	}
+
+	.installerCard a:has(button) {
+		margin-left: auto;
+	}
+
+	.installerCard .lucide {
+		margin-left: 0.5rem;
+		width: 2rem;
+		height: 2rem;
+		stroke-width: 1pt;
+	}
+
+	.installerCard button .lucide {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 2rem;
+		stroke-width: 1pt;
+	}
+
+	.installerCard div p {
+		padding: 0;
+		margin: 0;
+	}
+</style>
