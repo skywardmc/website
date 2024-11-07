@@ -11,8 +11,8 @@
 	},
 	"dependencies": {
 		"@astrojs/sitemap": "^3.2.1",
-		"@intergrav/dev.css": "^3.5.2",
-		"astro": "^4.16.9",
+		"@intergrav/dev.css": "^3.6.0",
+		"astro": "^4.16.10",
 		"lucide-astro": "^0.454.0"
 	},
 	"devDependencies": {
