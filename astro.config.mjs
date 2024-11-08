@@ -6,4 +6,7 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
 	site: "https://skywardmc.org",
 	integrations: [sitemap()],
+	redirects: {
+		"/project/[...slug]": "/[...slug]",
+	},
 });
