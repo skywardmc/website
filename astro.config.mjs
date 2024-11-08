@@ -7,6 +7,7 @@ export default defineConfig({
 	site: "https://skywardmc.org",
 	integrations: [sitemap()],
 	redirects: {
-		"/project/[...slug]": "/[...slug]",
+		"/project/adrenaline": "/adrenaline",
+		"/project/additive": "/additive",
 	},
 });
