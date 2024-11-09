@@ -58,7 +58,7 @@ import "../styles/pagefind.css";
 
 <style>
 	aside {
-		padding: 2rem 2rem 0rem;
+		padding: 2rem 2rem 0;
 		display: none;
 		position: fixed;
 		top: 0;
@@ -95,13 +95,15 @@ import "../styles/pagefind.css";
 
 	@media (min-width: 80rem) {
 		aside {
-			padding: 0rem;
+			padding: 2rem 0 0;
+			padding-right: 1rem;
 			display: block;
 			position: fixed;
-			top: 9rem;
+			top: 7rem;
 			left: calc(50% - ((46rem) / 2) - (16rem));
 			width: 14rem;
-			max-height: calc(100% - 9rem);
+			max-height: calc(100% - 7rem);
+			background-color: #00000000;
 		}
 
 		#hamburger {
