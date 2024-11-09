@@ -5,11 +5,10 @@ import "../styles/dcskywardmc.css";
 import Header from "../components/Header.astro";
 import WikiNavigation from "../components/WikiNavigation.astro";
 import Footer from "../components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
-<html lang="en" transition:animate="none">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,13 +32,11 @@ import { ViewTransitions } from "astro:transitions";
 		<meta name="twitter:image" content="/spray.png" />
 		<!-- Sitemap Link -->
 		<link rel="sitemap" href="/sitemap-index.xml" />
-		<!-- View Transitions -->
-		<ViewTransitions />
 	</head>
 	<body>
 		<Header />
 		<WikiNavigation />
-		<main transition:animate="slide" data-pagefind-body>
+		<main data-pagefind-body>
 			<h1 data-pagefind-meta="title">{frontmatter.title}</h1>
 			<slot />
 			<Footer />
