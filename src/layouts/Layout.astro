@@ -1,9 +1,9 @@
 ---
+const { frontmatter } = Astro.props;
 import "@intergrav/dev.css";
 import Header from "../components/Header.astro";
+import WikiNavigation from "../components/WikiNavigation.astro";
 import Footer from "../components/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
-const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -12,39 +12,46 @@ const { title, description } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>{title} - SkywardMC</title>
-		<meta name="description" content={description} />
-
+		<title>{frontmatter.title} - SkywardMC</title>
+		<meta name="description" content={frontmatter.description} />
 		<!-- Additional meta tags for SEO -->
 		<meta name="robots" content="index, follow" />
 		<meta name="author" content="SkywardMC" />
 		<link rel="canonical" href={Astro.url.pathname} />
-
 		<!-- Open Graph Meta Tags -->
-		<meta property="og:title" content={`${title} - SkywardMC`} />
-		<meta property="og:description" content={description} />
+		<meta property="og:title" content={`${frontmatter.title} - SkywardMC`} />
+		<meta property="og:description" content={frontmatter.description} />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content={Astro.url.pathname} />
 		<meta property="og:image" content="/spray.png" />
-
 		<!-- Twitter Card Meta Tags -->
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content={`${title} - SkywardMC`} />
-		<meta name="twitter:description" content={description} />
+		<meta name="twitter:title" content={`${frontmatter.title} - SkywardMC`} />
+		<meta name="twitter:description" content={frontmatter.description} />
 		<meta name="twitter:image" content="/spray.png" />
-
 		<!-- Sitemap Link -->
 		<link rel="sitemap" href="/sitemap-index.xml" />
-
-		<!-- View Transitions -->
-		<ViewTransitions />
 	</head>
-	<body transition:animate="none">
+	<body>
 		<Header />
-		<div transition:animate="slide">
-			<h1>{title}</h1>
+		<WikiNavigation />
+		<main data-pagefind-body>
+			<h1>{frontmatter.title}</h1>
 			<slot />
 			<Footer />
-		</div>
+		</main>
 	</body>
 </html>
+
+<script>
+	const path = window.location.pathname;
+	const style = document.createElement("style");
+	if (path === "/") {
+		style.innerHTML = `@import '/dcskywardmc.css'`;
+	} else if (path.startsWith("/adrenaline")) {
+		style.innerHTML = `@import '/dcadrenaline.css'`;
+	} else if (path.startsWith("/additive")) {
+		style.innerHTML = `@import '/dcadditive.css'`;
+	}
+	document.head.appendChild(style);
+</script>
