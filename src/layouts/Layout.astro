@@ -36,7 +36,7 @@ import Footer from "../components/Footer.astro";
 		<Header />
 		<WikiNavigation />
 		<main data-pagefind-body>
-			<h1>{frontmatter.title}</h1>
+			<h1 data-pagefind-meta="title">{frontmatter.title}</h1>
 			<slot />
 			<Footer />
 		</main>
