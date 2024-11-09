@@ -6,7 +6,7 @@ import "../styles/pagefind.css";
 
 <button id="hamburger" aria-label="Toggle navigation"><Menu /></button>
 
-<aside id="mobile-nav">
+<aside id="wikinavigation">
 	<h1>Navigation</h1>
 	<Search
 		id="search"
@@ -111,20 +111,8 @@ import "../styles/pagefind.css";
 </style>
 
 <script>
-	function handleResize() {
-		const nav = document.getElementById("mobile-nav");
-		if (window.innerWidth >= 80 * 16) {
-			nav.style.display = "block";
-		} else {
-			if (nav.style.display === "block") {
-				nav.style.display = "none";
-			}
-		}
-	}
-	window.addEventListener("resize", handleResize);
-	handleResize();
 	document.getElementById("hamburger").addEventListener("click", function () {
-		const nav = document.getElementById("mobile-nav");
+		const nav = document.getElementById("wikinavigation");
 		nav.style.display = nav.style.display === "block" ? "none" : "block";
 	});
 </script>
