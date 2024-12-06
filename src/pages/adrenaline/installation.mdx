@@ -7,7 +7,7 @@ style: "adrenaline"
 
 import AdditiveInstallerCard from "../../components/AdditiveInstallerCard.astro";
 
-You can install Adrenaline through our free and open-source installer by clicking the button below. Alternatively, if you want to install Adrenaline through a third-party launcher, or on your server, follow [Modrinth's documentation](https://support.modrinth.com/en/articles/8802250-modpacks-on-modrinth).
+You can install Adrenaline through our free and open-source installer by clicking the button below. Alternatively, if you want to install Adrenaline through a third-party launcher, follow [Modrinth's documentation](https://support.modrinth.com/en/articles/8802250-modpacks-on-modrinth).
 
 <AdditiveInstallerCard />
 
@@ -38,5 +38,112 @@ Prism is now installed. Now, we can install the pack.
 5. Go into the instance's mods tab and install [Controlify](https://modrinth.com/mod/controlify). Optionally, you may also want to install [Resourcify](https://modrinth.com/mod/resourcify).
 6. For the first launch, you will get a notice at the start of the game to download some libraries and calibrate your controller. Simply follow the on-screen instructions and you shouldn't have to do this again.
 7. After launching, go to your video settings and enable fullscreen to fix the aspect ratio. Enjoy!
+
+</details>
+
+<details>
+
+<summary>Installing on servers</summary>
+
+Adrenaline also optionally functions server-side! We now use Modrinth's mrpack environment feature to install the proper mods for the correct environment. Client-side mods that are part of Adrenaline will not be installed through these methods. The server portion of this modpack was previously known as [Adrenaserver](https://modrinth.com/modpack/adrenaserver).
+
+<details>
+<summary>📦 Install using mrpack-install</summary>
+
+Download `mrpack-install` through [GitHub releases](https://github.com/nothub/mrpack-install/releases) (or your distro's package if it has one) and take a look at the commands on the [README](https://github.com/nothub/mrpack-install). In Adrenaline's case, to install in your server you would run:
+
+```sh
+mrpack-install adrenaline [optional version number]
+```
+
+</details>
+
+<details>
+<summary>🐋 Install using Docker Compose</summary>
+
+> It's a good idea to have some knowledge on using Docker before doing this.
+
+1. Make sure you have Docker Engine installed properly according to the [Docker docs](https://docs.docker.com/engine/install)
+2. Create a new directory
+3. Place the contents below in a file called `docker-compose.yml`. This Compose file also contains some other server tweaks meant for performance, such as disabling `sync-chunk-writes`, reducing render and simulation distance, and more
+4. Run `docker compose up -d` in that directory
+
+For any other information, you can read through the [Docker Minecraft Server documentation](https://docker-minecraft-server.readthedocs.io).
+
+```yaml
+services:
+  mc:
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      # Adrenaline and other mods
+      MOD_PLATFORM: MODRINTH
+      MODRINTH_DOWNLOAD_DEPENDENCIES: required
+      MODRINTH_MODPACK: adrenaline # this installs the latest version of Adrenaline, you can also use a specific MR link to a version
+      MODRINTH_PROJECTS: spark, chunky # comma separated list of extra mods
+      # Server properties
+      VIEW_DISTANCE: 8
+      SIMULATION_DISTANCE: 5
+      SYNC_CHUNK_WRITES: false # having this set to false will significantly improve performance but may cause desync issues and (extremely rare) data corruption. set to true if you don't have a backup system
+    volumes:
+      # Attach the relative directory 'data' to the container's /data path
+      - ./data:/data
+```
+
+</details>
+
+<details>
+<summary>✨ Install using mcman</summary>
+
+[mcman](https://github.com/ParadigmMC/mcman) is a tool for managing the mods/plugins/configurations of a Minecraft server. First, install mcman from [releases](https://github.com/ParadigmMC/mcman/releases). To import Adrenaline while initializing a server, use this command:
+
+```sh
+mcman init --mrpack mr:adrenaline
+```
+
+After initializing and importing the mrpack, run `mcman build` to build the server into the `server/` directory, from which you can call `cd server && sh start.sh` or `cd server && call start.bat`. For more information, check out [mcman's docs](https://github.com/ParadigmMC/mcman/blob/main/DOCS.md).
+
+</details>
+
+<details>
+<summary>💿 Install using mrpack4server</summary>
+
+See the [mrpack4server](https://github.com/Patbox/mrpack4server) Git repository for installation info. `modpack-info.json`:
+
+```json
+{
+  "project_id": "adrenaline",
+  "version_id": "version id or name"
+}
+```
+
+</details>
+
+<details>
+<summary>🧙 Install using packwiz-installer</summary>
+
+> Before doing any of this, be sure to have a backup of the server in case anything goes wrong.
+
+[packwiz-installer](https://github.com/packwiz/packwiz-installer) is a useful tool that lets you automatically install and update a modpack through the `pack.toml` file of that pack.
+
+Some server hosts may let you set a command that runs before the server actually starts. It's called a pre-launch command. I can't exactly help if you are using an external server provider as many don't support pre-launch commands or require you to supply your own jar file that will run the command.
+
+First, you need to install `packwiz-installer-bootstrap` from [here](https://github.com/packwiz/packwiz-installer-bootstrap/releases). After that, move it to the same folder as your server's Fabric loader jar. This will usually be the root of the server.
+
+You may change the MC version of the modpack ([available versions only](https://github.com/intergrav/adrenaline/tree/main/versions)).
+
+```sh
+java -jar packwiz-installer-bootstrap.jar -g -s server https://raw.githack.com/intergrav/Adrenaline/main/versions/fabric/1.21.1/pack.toml
+```
+
+If you are running this server through a batch file or shell script, you can add this command before your server's launch command and it should work just fine.
+
+_Having trouble? Check out the [packwiz wiki](https://packwiz.infra.link/tutorials/installing/packwiz-installer/#using-a-modpack-with-a-server) and, if that doesn't help, ask in the [packwiz Discord server](https://discord.gg/DcSkRF4)._
+
+</details>
 
 </details>
