@@ -43,6 +43,7 @@ _based on Additive, and by extension, Adrenaline..._
 - [The Fresh Experience](https://modrinth.com/modpack/the-fresh-experience) by [cohyunoh](https://modrinth.com/user/cohyunoh)
 - [Slabcraft](https://modrinth.com/modpack/slabcraft) by [Simplicity Team](https://modrinth.com/organization/simplicity-team)
 - [Simplicity QoL](https://modrinth.com/modpack/simplicity-qol) by [ReveredOxygen](https://modrinth.com/user/ReveredOxygen)
+- [Bedrock Reloaded](https://modrinth.com/modpack/bedrock-reloaded) by [SeriousFreezing](https://modrinth.com/user/SeriousFreezing)
 
 ## Cool people
 
