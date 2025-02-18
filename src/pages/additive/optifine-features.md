@@ -17,7 +17,7 @@ Here is the list of OptiFine features that are present in this pack. If I have m
 
 | Feature | 1.21.4 | 1.21.1 | 1.20.1 | Provider (> means if not available then) |
 |---|---|---|---|---|
-| Optimization | ✅ | ✅ | ✅ | [adrenaline/wiki/Performance-features](https://github.com/skywardmc/adrenaline/wiki/Performance-features) |
+| Optimization | ✅ | ✅ | ✅ | [/adrenaline/Performance-features](/adrenaline/performance-features/) |
 | Shaders | ✅ | ✅ | ✅ | [Iris](https://modrinth.com/mod/iris) |
 | Dynamic Lights | ✅ | ✅ | ✅ | [LambDynamicLights](https://modrinth.com/mod/lambdynamiclights) |
 | Zoom | ✅ | ✅ | ✅ | [Ok Zoomer](https://modrinth.com/mod/ok-zoomer) > [Zoomify](https://modrinth.com/mod/zoomify) > [Zume](https://modrinth.com/mod/zume) |
