@@ -65,7 +65,7 @@ By default, Adrenaline does **not** change any of Minecraft's quality/graphics s
 
 Start by changing your render distance. The higher this number, the further you can see. If you are playing on multiplayer, servers usually have a cap for render distance. On low-end systems, this should be set to 4-8 chunks. Mid-range systems will usually work well with 8-16 chunks, and high-end systems should be fine with 12-24 chunks.
 
-After this, you can change your simulation distance. This is the distance in chunks that entities, blocks, fluids, etc are ticked, meaning that things like farms outside of this distance may not work properly. Unless you have areas with big farms and such, the default 5 should work well. If not, use 8-12. _This only affects singleplayer - you won't notice anything while playing on servers as they have their own setting for simulation distance._
+After this, you can change your simulation distance. This is the distance in chunks that entities, blocks, fluids, etc are ticked, meaning that things like farms outside of this distance may not work properly. You can set this to 5 for better performance, but it could affect mob spawning or farms. _This only affects singleplayer - you won't notice anything while playing on servers as they have their own setting for simulation distance._
 
 I recommend keeping V-Sync turned off unless you notice screen tearing, which in that case, turn it on or use Adaptive V-Sync. To use Adaptive V-Sync, you will need to install the [Sodium Extra](https://modrinth.com/project/sodium-extra) mod. If you are using Additive, this mod is already included. Adaptive V-Sync typically has less input latency than normal V-Sync.
 
