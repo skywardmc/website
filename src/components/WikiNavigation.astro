@@ -4,117 +4,55 @@ import Search from "astro-pagefind/components/Search";
 import "../styles/pagefind.css";
 ---
 
-<button id="hamburger" aria-label="Toggle navigation"><Menu /></button>
-
 <aside id="wikinavigation">
-	<h1>Navigation</h1>
-	<Search
-		id="search"
-		className="pagefind-ui"
-		uiOptions={{ showImages: false, resetStyles: false }}
-	/>
-	<nav>
-		<ul>
-			<li><a href="/">Home</a></li>
-			<li>
-				<a href="/adrenaline">Adrenaline</a>
-				<ul>
-					<li><a href="/adrenaline/installation">Installation</a></li>
-					<li><a href="/adrenaline/post-install">Post install</a></li>
-					<li>
-						<a href="/adrenaline/frequently-asked-questions"
-							>Frequently asked questions</a
-						>
-					</li>
-					<li>
-						<a href="/adrenaline/performance-features">Performance features</a>
-					</li>
-					<li><a href="/adrenaline/troubleshooting">Troubleshooting</a></li>
-					<li><a href="/adrenaline/credits">Credits</a></li>
-				</ul>
-			</li>
-		</ul>
-		<ul>
-			<li>
-				<a href="/additive">Additive</a>
-				<ul>
-					<li><a href="/additive/installation">Installation</a></li>
-					<li><a href="/additive/post-install">Post install</a></li>
-					<li>
-						<a href="/additive/frequently-asked-questions"
-							>Frequently asked questions</a
-						>
-					</li>
-					<li><a href="/additive/optifine-features">OptiFine features</a></li>
-					<li><a href="/additive/extra-features">Extra features</a></li>
-					<li><a href="/additive/supporter-cape">Supporter cape</a></li>
-					<li><a href="/additive/troubleshooting">Troubleshooting</a></li>
-					<li><a href="/additive/credits">Credits</a></li>
-				</ul>
-			</li>
-		</ul>
-	</nav>
+	<article>
+		<h1>Navigation</h1>
+		<Search
+			id="search"
+			className="pagefind-ui"
+			uiOptions={{ showImages: false, resetStyles: false }}
+		/>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li>
+					<a href="/adrenaline">Adrenaline</a>
+					<ul>
+						<li><a href="/adrenaline/installation">Installation</a></li>
+						<li><a href="/adrenaline/post-install">Post install</a></li>
+						<li>
+							<a href="/adrenaline/frequently-asked-questions"
+								>Frequently asked questions</a
+							>
+						</li>
+						<li>
+							<a href="/adrenaline/performance-features">Performance features</a
+							>
+						</li>
+						<li><a href="/adrenaline/troubleshooting">Troubleshooting</a></li>
+						<li><a href="/adrenaline/credits">Credits</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<a href="/additive">Additive</a>
+					<ul>
+						<li><a href="/additive/installation">Installation</a></li>
+						<li><a href="/additive/post-install">Post install</a></li>
+						<li>
+							<a href="/additive/frequently-asked-questions"
+								>Frequently asked questions</a
+							>
+						</li>
+						<li><a href="/additive/optifine-features">OptiFine features</a></li>
+						<li><a href="/additive/extra-features">Extra features</a></li>
+						<li><a href="/additive/supporter-cape">Supporter cape</a></li>
+						<li><a href="/additive/troubleshooting">Troubleshooting</a></li>
+						<li><a href="/additive/credits">Credits</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</article>
 </aside>
-
-<style>
-	aside {
-		padding: 2rem 2rem 0;
-		display: none;
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		overflow-y: auto;
-		z-index: 1000;
-		background-color: var(--dc-bg-1);
-	}
-
-	aside h1,
-	aside h2,
-	aside h3 {
-		border-bottom: none;
-	}
-
-	#hamburger {
-		display: flex;
-		align-items: center;
-		position: fixed;
-		top: 2rem;
-		right: 1rem;
-		width: 3rem;
-		height: 3rem;
-		padding: 0.25rem;
-		z-index: 1001;
-	}
-
-	#hamburger .lucide {
-		width: 100%;
-		height: 100%;
-	}
-
-	@media (min-width: 80rem) {
-		aside {
-			padding: 2rem 0 0;
-			padding-right: 1rem;
-			display: block;
-			position: fixed;
-			top: 7rem;
-			left: calc(50% - ((46rem) / 2) - (16rem));
-			width: 14rem;
-			max-height: calc(100% - 7rem);
-			background-color: #00000000;
-		}
-
-		#hamburger {
-			display: none;
-		}
-	}
-</style>
-
-<script>
-	document.getElementById("hamburger").addEventListener("click", function () {
-		const nav = document.getElementById("wikinavigation");
-		nav.style.display = nav.style.display === "block" ? "none" : "block";
-	});
-</script>
