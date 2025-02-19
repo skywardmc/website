@@ -14,8 +14,8 @@ importers:
         specifier: ^3.2.1
         version: 3.2.1
       "@intergrav/dev.css":
-        specifier: ^4.0.1
-        version: 4.0.1
+        specifier: ^4.0.2
+        version: 4.0.2
       astro:
         specifier: ^5.3.0
         version: 5.3.0(rollup@4.34.8)(typescript@5.6.3)
@@ -503,10 +503,10 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@intergrav/dev.css@4.0.1":
+  "@intergrav/dev.css@4.0.2":
     resolution:
       {
-        integrity: sha512-bE1f8rPa5TtplubSvXI05ESGOpgdph7W1MLbtqKOSaGP0WtUdp5V0ao1iWGRKSfKI8/pSfI2iWQaMj04oMr8zA==,
+        integrity: sha512-gSOzUYPBKJQPuEE6GhJS3b4rxVPlqfaLwIoGbMEu02XMaMBO4np7lhqaZZVfL8qBzUXkQ1KV1o7i0UwgTI5J0Q==,
       }
 
   "@jridgewell/sourcemap-codec@1.5.0":
@@ -1522,10 +1522,10 @@ packages:
         integrity: sha512-OguPdidb+fbHQSU4Q4ZiLKnzWo8Wwsf5bZfbvu7//a9oTYoqD/fWpe96NuHkoS9h0ccGOTe0C4NGXdtS0iObOw==,
       }
 
-  hast-util-to-jsx-runtime@2.3.2:
+  hast-util-to-jsx-runtime@2.3.3:
     resolution:
       {
-        integrity: sha512-1ngXYb+V9UT5h+PxNRa1O1FYguZK/XL+gkeqvp7EdHlB9oHUG0eYRo/vY5inBdcqo3RkPMC58/H94HvkbfGdyg==,
+        integrity: sha512-pdpkP8YD4v+qMKn2lnKSiJvZvb3FunDmFYQvVOsoO08+eTNWdaWKPMrC5wwNICtU3dQWHhElj5Sf5jPEnv4qJg==,
       }
 
   hast-util-to-parse5@8.0.0:
@@ -3281,7 +3281,7 @@ snapshots:
   "@img/sharp-win32-x64@0.33.5":
     optional: true
 
-  "@intergrav/dev.css@4.0.1": {}
+  "@intergrav/dev.css@4.0.2": {}
 
   "@jridgewell/sourcemap-codec@1.5.0": {}
 
@@ -3296,7 +3296,7 @@ snapshots:
       estree-util-is-identifier-name: 3.0.0
       estree-util-scope: 1.0.0
       estree-walker: 3.0.3
-      hast-util-to-jsx-runtime: 2.3.2
+      hast-util-to-jsx-runtime: 2.3.3
       markdown-extensions: 2.0.0
       recma-build-jsx: 1.0.0
       recma-jsx: 1.0.0(acorn@8.14.0)
@@ -3985,7 +3985,7 @@ snapshots:
       stringify-entities: 4.0.4
       zwitch: 2.0.4
 
-  hast-util-to-jsx-runtime@2.3.2:
+  hast-util-to-jsx-runtime@2.3.3:
     dependencies:
       "@types/estree": 1.0.6
       "@types/hast": 3.0.4
@@ -3997,7 +3997,7 @@ snapshots:
       mdast-util-mdx-expression: 2.0.1
       mdast-util-mdx-jsx: 3.2.0
       mdast-util-mdxjs-esm: 2.0.1
-      property-information: 6.5.0
+      property-information: 7.0.0
       space-separated-tokens: 2.0.2
       style-to-object: 1.0.8
       unist-util-position: 5.0.0
