@@ -14,8 +14,8 @@ importers:
         specifier: ^3.2.1
         version: 3.2.1
       "@intergrav/dev.css":
-        specifier: ^4.0.2
-        version: 4.0.2
+        specifier: ^4.0.3
+        version: 4.0.3
       astro:
         specifier: ^5.3.0
         version: 5.3.0(rollup@4.34.8)(typescript@5.6.3)
@@ -503,10 +503,10 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  "@intergrav/dev.css@4.0.2":
+  "@intergrav/dev.css@4.0.3":
     resolution:
       {
-        integrity: sha512-gSOzUYPBKJQPuEE6GhJS3b4rxVPlqfaLwIoGbMEu02XMaMBO4np7lhqaZZVfL8qBzUXkQ1KV1o7i0UwgTI5J0Q==,
+        integrity: sha512-ZFsM+x0YkJ5BgzYEZKqWazEfaAGclU9BgiSOCrkN5LNvRjTAy6JMr3SjcN5MRvzU3RU9aN2thxJnf2ovrG5LmA==,
       }
 
   "@jridgewell/sourcemap-codec@1.5.0":
@@ -3281,7 +3281,7 @@ snapshots:
   "@img/sharp-win32-x64@0.33.5":
     optional: true
 
-  "@intergrav/dev.css@4.0.2": {}
+  "@intergrav/dev.css@4.0.3": {}
 
   "@jridgewell/sourcemap-codec@1.5.0": {}
 
