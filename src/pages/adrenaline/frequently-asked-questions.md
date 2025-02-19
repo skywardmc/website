@@ -15,13 +15,13 @@ I don't usually like to make benchmarks comparing different modpacks. A _lot_ of
 
 Simply Optimized and Adrenaline are fairly similar modpacks, however they do have a few differences.
 
-- **Simply Optimized uses more experimental mods and patches that may be unstable and possibly incompatible with other content mods**. Most notably being [Concurrent Chunk Management Engine](https://modrinth.com/project/c2me-fabric) and some experimental patches from ModernFix. This means that SO is slightly faster than Adrenaline, at the cost of being possibly unstable.
-- **Simply Optimized gets updated more often**, usually every few days, whereas Adrenaline gets updated bi-weekly (or weekly if there are many changes.)
-- **Simply Optimized contains No Chat Reports, despite its goal of being a performance modpack**. Adrenaline does not as NCR is not in-scope.
+- **Simply Optimized uses more experimental mods and patches that may be unstable and possibly incompatible with other content mods**. Most notably being [Concurrent Chunk Management Engine](https://modrinth.com/project/c2me-fabric) (on the client) and some experimental patches from ModernFix. This means that in some scenarios SO can be a little faster than Adrenaline, at the cost of being possibly unstable.
+- **Simply Optimized gets updated more often**, usually every few days, whereas Adrenaline gets updated weekly, bi-weekly, or monthly depending on the amount of changes. This is mostly due to time constraints and I would update more often if I could.
+- **Simply Optimized contains No Chat Reports**. Adrenaline does not as NCR is not in-scope.
 - **Simply Optimized makes a few changes to the audio settings, FOV, etc.** Adrenaline uses all of the default settings from Minecraft except for the simulation distance.
 - **Simply Optimized does not include YOSBR**. This means that your changes to modpack settings get overridden every time you update.
 
-Neither modpack is perfect and both have their pros and cons. You should use the one that is best for your use-case. If you prefer SO having more experimental optimizations, want faster updates, and are okay with No Chat Reports, go for it! If you prefer Adrenaline being a little more stable and having nearly the same amount of performance, consider checking us out instead. Or use a different one or make your own. I don’t really care.
+Neither modpack is perfect for everyone - you should use the one that is best for your use-case. If you prefer SO having more experimental optimizations, want faster updates, and are okay with No Chat Reports, go for it! If you prefer Adrenaline being a little more stable and having nearly the same amount of performance, consider taking a look aswell.
 
 ## How can I provide feedback?
 

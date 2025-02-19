@@ -13,15 +13,15 @@ I say it's very unlikely to cause corruption to world data, however, I would alw
 
 I don't usually like to make benchmarks comparing different modpacks. A _lot_ of factors have to be considered when doing so, and this can lead to misleading benchmarks if not done correctly. However, I _can_ give a general comparison between different modpacks and what features they provide. In this case, I'll compare Fabulously Optimized, as I get asked about that a lot. If you want a comparison between Adrenaline and Simply Optimized, see [Adrenaline/Frequently asked questions](/adrenaline/frequently-asked-questions).
 
-Additive and Fabulously Optimized are pretty similar modpacks, however they do have a few differences. This doesn't mean either modpack is bad, however I would consider these if choosing between them.
+Additive and Fabulously Optimized are pretty similar modpacks, however they do have a few differences.
 
-- **Adrenaline (the project Additive is built from) typically adopts more optimization mods and has more config files**, resulting in being faster in some cases. This can depend on hardware configuration and should be manually tested by the user.
-- **Additive supports both Quilt and Fabric, whereas Fabulously Optimized only supports Fabric**, missing out on some mods like [LambdaBetterGrass](https://modrinth.com/project/lambdabettergrass) and [Ok Zoomer](https://modrinth.com/project/ok-zoomer), requiring to replace those mods with alternatives. Some of those alternatives have their downsides, such as [Fast Better Grass](https://modrinth.com/resourcepack/fast-better-grass) as it doesn't support Fancy grass.
-- **Additive does not change any of Minecraft's settings, other than simulation distance, whereas Fabulously Optimized changes [quite a few](https://fabulously-optimized.gitbook.io/modpack/readme/changed-options)**.
-- **Additive has less QOL mods, notably being [No Chat Reports](https://modrinth.com/project/no-chat-reports)**. I don't exactly want to make heavy changes and I especially don't want to try blocking what Mojang wants to enforce. You can easily add NCR manually if you want it, but the mod isn't for everyone. FO also has a few other things, such as extended chat history and some bug fixes.
+- **Adrenaline (the project Additive is built from) typically adopts more optimizations quickly**, resulting in being faster in some cases. The performance difference can depend on hardware configuration and should be manually tested by the user.
+- **Additive does not change any of Minecraft's settings, other than simulation distance, whereas Fabulously Optimized changes [quite a few](https://wiki.download.fo/changed-options)**.
+- **Additive has less QOL mods, notably being [No Chat Reports](https://modrinth.com/project/no-chat-reports)**. I don't exactly want to make heavy changes and I especially don't want to try blocking what Mojang wants to enforce. You can easily add NCR manually if you want it. FO also has a few other things, such as extended chat history and some bug fixes.
+- **Additive supports more Minecraft versions at once**, while Fabulously Optimized typically only keeps the latest Minecraft versions up to date.
 - **Additive is only on Modrinth**, whereas Fabulously Optimized is distributed on both CurseForge and Modrinth.
 
-If you like the extra mods and config changes that Fabulously Optimized has and you only use the latest versions of Minecraft, go for that! If you prefer Additive being more simple, staying more true to vanilla, having less QOL, and some more optimizations, or want both Fabric and Quilt support, consider trying it out. You should use the modpack that works best in your use-case. Both modpacks have their pros and cons.
+If you like the extra mods and config changes that Fabulously Optimized has and you only use the latest versions of Minecraft, go for that! If you prefer Additive being more simple, staying more true to vanilla, having less QOL, and some more optimizations, consider trying it out. You should use the modpack that works best in your use-case. Both modpacks have their pros and cons.
 
 ## How can I provide feedback?
 
