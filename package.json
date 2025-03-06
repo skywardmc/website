@@ -10,13 +10,13 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^4.0.8",
+		"@astrojs/mdx": "^4.1.0",
 		"@astrojs/sitemap": "^3.2.1",
-		"@intergrav/dev.css": "^4.0.3",
-		"astro": "^5.3.0",
-		"astro-pagefind": "^1.8.0",
-		"lucide-astro": "^0.473.0",
-		"prettier": "^3.5.1"
+		"@intergrav/dev.css": "^4.2.3",
+		"astro": "^5.4.2",
+		"astro-pagefind": "^1.8.1",
+		"lucide-astro": "^0.477.0",
+		"prettier": "^3.5.3"
 	},
 	"devDependencies": {
 		"prettier-plugin-astro": "^0.14.1"
