@@ -15,7 +15,7 @@
 		"@intergrav/dev.css": "^4.2.3",
 		"astro": "^5.7.11",
 		"astro-pagefind": "^1.8.3",
-		"lucide-astro": "^0.507.0",
+		"lucide-astro": "^0.508.0",
 		"prettier": "^3.5.3"
 	},
 	"devDependencies": {
