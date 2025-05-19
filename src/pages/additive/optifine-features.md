@@ -17,12 +17,12 @@ Here is the list of OptiFine features that are present in this pack. If I have m
 
 | Feature | 1.21.5 | 1.21.4 | 1.21.1 | 1.20.1 | Provider (> means if not available then) |
 |---|---|---|---|---|---|
-| Optimization | ✅ | ✅ | ✅ | ✅ | [adrenaline/wiki/Performance-features](https://github.com/skywardmc/adrenaline/wiki/Performance-features) |
+| Optimization | ✅ | ✅ | ✅ | ✅ | [Adrenaline/Performance-features](/adrenaline/performance-features) |
 | Shaders | ✅ | ✅ | ✅ | ✅ | [Iris](https://modrinth.com/mod/iris) |
 | Dynamic Lights | ✅ | ✅ | ✅ | ✅ | [LambDynamicLights](https://modrinth.com/mod/lambdynamiclights) |
 | Zoom | ✅ | ✅ | ✅ | ✅ | [Ok Zoomer](https://modrinth.com/mod/ok-zoomer) > [Zoomify](https://modrinth.com/mod/zoomify) > [Zume](https://modrinth.com/mod/zume) |
 | Better Grass | ✅ | ✅ | ✅ | ✅ | [LambdaBetterGrass](https://modrinth.com/mod/lambdabettergrass) > [BetterGrassify](https://www.modrinth.com/mod/bettergrassify) |
-| Connected Textures | ⛔ | ✅ | ✅ | ✅ | [Continuity](https://modrinth.com/mod/continuity) |
+| Connected Textures | ✅ | ✅ | ✅ | ✅ | [Continuity](https://modrinth.com/mod/continuity) |
 | Custom Item Textures | ⛔ | ⛔ | ✅ | ✅ | [CIT Resewn](https://modrinth.com/mod/cit-resewn) |
 | Custom Entity Models | ✅ | ✅ | ✅ | ✅ | [Entity Model Features](https://modrinth.com/mod/entity-model-features) |
 | Capes | ✅ | ✅ | ✅ | ✅ | [Fabric Capes](https://modrinth.com/mod/capes) |
@@ -31,7 +31,7 @@ Here is the list of OptiFine features that are present in this pack. If I have m
 | Detail Control | ✅ | ✅ | ✅ | ✅ | [Sodium Extra](https://modrinth.com/mod/sodium-extra) |
 | Animation Control | ✅ | ✅ | ✅ | ✅ | [Sodium Extra](https://modrinth.com/mod/sodium-extra) |
 | Miscellaneous Toggles | ✅ | ✅ | ✅ | ✅ | [Sodium Extra](https://modrinth.com/mod/sodium-extra) |
-| Custom Colors | ⛔ | ✅ | ✅ | ✅ | [Polytone](https://modrinth.com/mod/polytone) |
+| Custom Colors | ✅ | ✅ | ✅ | ✅ | [Polytone](https://modrinth.com/mod/polytone) |
 | Custom GUI | ✅ | ✅ | ✅ | ✅ | [OptiGUI](https://modrinth.com/mod/optigui) |
 | Custom Sky | ⛔ | ⛔ | ✅ | ✅ | [FabricSkyboxes](https://modrinth.com/mod/fabricskyboxes) + [FabricSkyboxes Interop](https://modrinth.com/mod/fabricskyboxes-interop) |
 | Emissive Blocks | ✅ | ✅ | ✅ | ✅ | [Continuity](https://modrinth.com/mod/continuity) |

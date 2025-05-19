@@ -25,7 +25,7 @@ Adrenaline utilizes various performance mods to improve the game's logic and ren
 | [FerriteCore](https://modrinth.com/mod/ferrite-core) (both) | Heavily reduces the memory usage of Minecraft in many different ways. | ✅ | ✅ | ✅ | ✅ |
 | [Lithium](https://modrinth.com/mod/lithium) (both) | General-purpose optimization mod that aims to improve logic performance without changing game mechanics. | ✅ | ✅ | ✅ | ✅ |
 | [ModernFix](https://modrinth.com/mod/modernfix) (both) | All-in-one mod that drastically reduces memory usage and improves performance. | ⛔ | ✅ | ✅ | ✅ |
-| [Noisium](https://modrinth.com/mod/noisium) (both) | Optimizes worldgen performance without any compromises to parity. | ⛔ | ✅ | ✅ | ✅ |
+| [Noisium](https://modrinth.com/mod/noisium) (both) | Optimizes worldgen performance without any compromises to parity. | ✅ | ✅ | ✅ | ✅ |
 | [ThreadTweak](https://modrinth.com/mod/threadtweak) (both) | Improve and tweak Minecraft's thread scheduling. | ✅ | ✅ | ✅ | ✅ |
 | [C2ME](https://modrinth.com/mod/c2me-fabric) (server) | Heavily improves the chunk performance of Minecraft through multi-threading (marked as server-side because it doesn't benefit singleplayer much and may hurt performance on low-end hardware). | ✅ | ✅ | ✅ | ✅ |
 | [Krypton](https://modrinth.com/mod/krypton) (server) | Heavily optimizes Minecraft's networking stack on the server. | ✅ | ✅ | ✅ | ✅ |
