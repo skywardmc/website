@@ -11,11 +11,11 @@
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^4.2.6",
-		"@astrojs/sitemap": "^3.3.1",
+		"@astrojs/sitemap": "^3.4.0",
 		"@intergrav/dev.css": "^4.2.3",
-		"astro": "^5.7.11",
+		"astro": "^5.7.13",
 		"astro-pagefind": "^1.8.3",
-		"lucide-astro": "^0.508.0",
+		"lucide-astro": "^0.511.0",
 		"prettier": "^3.5.3"
 	},
 	"devDependencies": {
