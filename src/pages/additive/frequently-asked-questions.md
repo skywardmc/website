@@ -17,7 +17,7 @@ Additive and Fabulously Optimized are pretty similar modpacks, however they do h
 
 - **Adrenaline (the project Additive is built from) typically adopts more optimizations quickly**, resulting in being faster in some cases. The performance difference can depend on hardware configuration and should be manually tested by the user.
 - **Additive does not change any of Minecraft's settings, other than simulation distance, whereas Fabulously Optimized changes [quite a few](https://wiki.download.fo/changed-options)**.
-- **Additive has less QOL mods, notably being [No Chat Reports](https://modrinth.com/project/no-chat-reports)**. I don't exactly want to make heavy changes and I especially don't want to try blocking what Mojang wants to enforce. You can easily add NCR manually if you want it. FO also has a few other things, such as extended chat history and some bug fixes.
+- **Additive has less QOL mods, notably being [No Chat Reports](https://modrinth.com/project/no-chat-reports)**. I don't want to make heavy changes like this. You can easily add NCR manually if you want it. FO also has a few other things, such as extended chat history and some bug fixes.
 - **Additive supports more Minecraft versions at once**, while Fabulously Optimized typically only keeps the latest Minecraft versions up to date.
 - **Additive is only on Modrinth**, whereas Fabulously Optimized is distributed on both CurseForge and Modrinth.
 
