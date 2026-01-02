@@ -139,7 +139,7 @@
 
     "@img/sharp-win32-x64": ["@img/sharp-win32-x64@0.34.3", "", { "os": "win32", "cpu": "x64" }, "sha512-OWwz05d++TxzLEv4VnsTz5CmZ6mI6S05sfQGEMrNrQcOEERbX46332IvE7pO/EUiw7jUrrS40z/M7kPyjfl04g=="],
 
-    "@intergrav/dev.css": ["@intergrav/dev.css@4.2.5", "", {}, "sha512-cm3YPyNXFSYs+5bbvEQdEyG7kAmZ8t/0oUDA6ykt9WL1chTPnkIEWusSBEQmV4yN+OS8LL04hVfwMBPEDJf5WQ=="],
+    "@intergrav/dev.css": ["@intergrav/dev.css@4.2.6", "", {}, "sha512-NKGuEegCfdywQ+hSW460FfHBqdJZWUTtNXe9n79wSjOcHe32Z6zS+nQ1gBcC38Y/GYxPfqLTSOkuLxjMD6CCXA=="],
 
     "@jridgewell/sourcemap-codec": ["@jridgewell/sourcemap-codec@1.5.5", "", {}, "sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og=="],
 
