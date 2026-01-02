@@ -5,6 +5,8 @@ description: "Additive is a simple, modern, open-source alternative to OptiFine 
 style: "additive"
 ---
 
+<img alt="Additive logo" src="https://raw.githubusercontent.com/skywardmc/art/refs/heads/main/additive/logo_vector.svg" style="float: right; width: 128px; height: 128px;" />
+
 Additive is a simple, modern, open-source alternative to OptiFine for the most recent versions of Minecraft. It has basically every feature from OptiFine, including:
 
 - Major FPS and logic performance improvements
