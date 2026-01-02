@@ -2,13 +2,15 @@
 const { frontmatter } = Astro.props;
 import "@intergrav/dev.css";
 import "../styles/dcskywardmc.css";
+import "../styles/dcadditive.css";
+import "../styles/dcadrenaline.css";
 import Header from "../components/Header.astro";
 import WikiNavigation from "../components/WikiNavigation.astro";
 import Footer from "../components/Footer.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-style={frontmatter.style}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
