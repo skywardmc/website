@@ -5,7 +5,7 @@ description: "Adrenaline is a lightweight Minecraft modpack that heavily improve
 style: "adrenaline"
 ---
 
-<img alt="Adrenaline logo" src="https://raw.githubusercontent.com/skywardmc/art/refs/heads/main/adrenaline/logo_vector.svg" style="float: right; width: 128px; height: 128px;" />
+<img alt="Adrenaline logo" src="https://raw.githubusercontent.com/skywardmc/art/refs/heads/main/adrenaline/logo_vector.svg" style="float: right; width: 128px; height: 128px; margin-inline-start: 1rem;" />
 
 Adrenaline is a lightweight, open-source modpack that significantly improves Minecraft render and logic performance through various different mods and configurations. You can install it on either your client or server - installation instructions are below.
 
