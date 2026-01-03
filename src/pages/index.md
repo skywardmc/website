@@ -9,6 +9,10 @@ Welcome to SkywardMC's wiki! We're a community that makes useful Minecraft modpa
 
 SkywardMC was started in 2021 by [Devin](https://github.com/intergrav) (initially known as Devin's Projects), and has slowly grown to become a larger group of people maintaining various different Minecraft-related things. If you would like to join, feel free to check out our Discord server linked above.
 
+This website was built with <a href="https://astro.build">Astro</a> and <a
+			href="https://github.com/intergrav/dev.css">dev.css</a
+		>, here's the <a href="https://github.com/skywardmc/docs">source code</a>.
+
 ## Projects
 
 Here are some of our projects. Not everything that we've made is listed here though; You can find the rest on our GitHub linked above.

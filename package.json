@@ -12,7 +12,7 @@
 	"dependencies": {
 		"@astrojs/mdx": "^4.3.13",
 		"@astrojs/sitemap": "^3.6.0",
-		"@intergrav/dev.css": "^4.3.1",
+		"@intergrav/dev.css": "^4.3.2",
 		"astro": "^5.16.6",
 		"astro-pagefind": "^1.8.5",
 		"lucide-astro": "^0.556.0",
