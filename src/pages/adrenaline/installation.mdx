@@ -6,17 +6,20 @@ style: "adrenaline"
 ---
 
 import AdditiveInstallerCard from "../../components/AdditiveInstallerCard.astro";
+import { Picture } from "astro:assets";
+import AdditiveInstallerAdrenaline from "../../assets/images/additive-installer_adrenaline.png";
 
 You can install Adrenaline through our free and open-source installer by clicking the button below, and then uncheck "Include non-performance features". Alternatively, if you want to install Adrenaline through a third-party launcher, follow [Modrinth's documentation](https://support.modrinth.com/en/articles/8802250-modpacks-on-modrinth).
 
 <AdditiveInstallerCard />
 
-<img
-	alt="Screenshot of the Additive installer"
-	src="/images/additive-installer_adrenaline.png"
-	style="width: 32rem; display: block; margin: 0 auto;"
+<Picture
+	alt="Screenshot of the Additive installer, with Adrenaline selected"
+	src={AdditiveInstallerAdrenaline}
+	width={486}
+	densities={[1, 2]}
+	style="margin-inline: auto;"
 />
-​
 
 The Additive installer works on Windows, MacOS, and Linux. If you can't open the installer, try running `java -jar additive-installer-1.0.4.jar` in a terminal. You need Java installed.
 
