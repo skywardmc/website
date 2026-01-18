@@ -16,7 +16,8 @@
 		"@lucide/astro": "^0.562.0",
 		"astro": "^5.16.11",
 		"astro-pagefind": "^1.8.5",
-		"prettier": "^3.8.0"
+		"prettier": "^3.8.0",
+		"sharp": "^0.34.5"
 	},
 	"devDependencies": {
 		"prettier-plugin-astro": "^0.14.1"
