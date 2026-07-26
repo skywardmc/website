@@ -9,7 +9,6 @@ interface Props {
 	pack: string;
 	maintainers: { user: string; since: number; until?: number }[];
 	align?: "start" | "center" | "end";
-	divider?: "top" | "bottom" | false;
 	showIntroduction?: boolean;
 }
 
@@ -28,7 +27,6 @@ const {
 	pack,
 	maintainers,
 	align = "start",
-	divider = false,
 	showIntroduction = false,
 } = Astro.props;
 const [contributorNames, authors] = await Promise.all([
@@ -79,8 +77,6 @@ const usersClass =
 			? "flex flex-wrap items-center justify-center text-sm gap-2"
 			: "flex flex-wrap items-start justify-start text-sm gap-2";
 ---
-
-{divider === "top" && <hr />}
 
 <div class="not-prose">
 	{
@@ -148,5 +144,3 @@ const usersClass =
 		))
 	}
 </div>
-
-{divider === "bottom" && <hr />}
