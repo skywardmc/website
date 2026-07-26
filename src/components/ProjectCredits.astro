@@ -120,9 +120,7 @@ const usersClass =
 	{
 		creditSections.map(({ label, users }) => (
 			<div class={sectionClass}>
-				<p>
-					<strong>{label}</strong>
-				</p>
+				<p>{label}</p>
 				<div class={usersClass}>
 					{users.map(({ name, href, avatarUrl, since, until }) => (
 						<a
