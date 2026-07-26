@@ -138,7 +138,7 @@ const usersClass =
 						({ name, href, avatarUrl, since, until, avatarColors }) => (
 							<a
 								href={href}
-								class="inline-flex items-center hover:underline px-2 py-0.5 rounded-xs bg-skywardmc-offwhite dark:bg-skywardmc-offgray"
+								class="inline-flex gap-1 items-center hover:underline px-2 py-0.5 rounded-xs bg-skywardmc-offwhite dark:bg-skywardmc-offgray"
 								style={
 									avatarColors
 										? `background-color: ${avatarColors.background}; color: ${avatarColors.foreground}`
@@ -153,7 +153,7 @@ const usersClass =
 										densities={[1, 2]}
 										layout="none"
 										alt=""
-										class="size-4 shrink-0 rounded-xs me-1"
+										class="size-4 shrink-0 rounded-xs"
 										loading="lazy"
 										fetchpriority="low"
 									/>
