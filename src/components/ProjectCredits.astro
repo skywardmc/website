@@ -1,4 +1,5 @@
 ---
+import { avatarSrcSet, getAvatarColors } from "../lib/avatar";
 import { getGitHubContributors, getGitHubUsers } from "../lib/github";
 import { getModrinthAuthors } from "../lib/modrinth";
 
@@ -64,6 +65,19 @@ const creditSections: { label: string; users: CreditUser[] }[] = [
 		users: authors,
 	},
 ].filter(({ users }) => users.length > 0);
+const coloredCreditSections = await Promise.all(
+	creditSections.map(async ({ label, users }) => ({
+		label,
+		users: await Promise.all(
+			users.map(async (user) => ({
+				...user,
+				avatarColors: user.avatarUrl
+					? await getAvatarColors(user.avatarUrl)
+					: undefined,
+			})),
+		),
+	})),
+);
 const sectionClass =
 	align === "end"
 		? "mt-4 text-end flex flex-col gap-4"
@@ -72,10 +86,10 @@ const sectionClass =
 			: "mt-4 text-start flex flex-col gap-4";
 const usersClass =
 	align === "end"
-		? "flex flex-wrap items-end justify-end text-sm gap-2"
+		? "flex flex-wrap items-end justify-end gap-2"
 		: align === "center"
-			? "flex flex-wrap items-center justify-center text-sm gap-2"
-			: "flex flex-wrap items-start justify-start text-sm gap-2";
+			? "flex flex-wrap items-center justify-center gap-2"
+			: "flex flex-wrap items-start justify-start gap-2";
 ---
 
 <div class="not-prose">
@@ -100,45 +114,53 @@ const usersClass =
 				<p
 					class={
 						align === "end"
-							? "max-w-lg text-end text-sm"
+							? "max-w-sm text-end"
 							: align === "center"
-								? "max-w-lg text-center text-sm"
-								: "max-w-lg text-start text-sm"
+								? "max-w-sm text-center"
+								: "max-w-sm text-start"
 					}
 				>
-					{project} is an open-source, community-run project only made possible
-					by the wonderfully talented Minecraft modding community!
+					{project} is made possible by the wonderfully talented Minecraft
+					modding community!
 				</p>
 			</div>
 		)
 	}
 
 	{
-		creditSections.map(({ label, users }) => (
+		coloredCreditSections.map(({ label, users }) => (
 			<div class={sectionClass}>
 				<p>{label}</p>
 				<div class={usersClass}>
-					{users.map(({ name, href, avatarUrl, since, until }) => (
-						<a
-							href={href}
-							class="inline-flex items-center hover:underline px-2 py-0.5 rounded-xs bg-skywardmc-offwhite dark:bg-skywardmc-offgray"
-						>
-							{avatarUrl && (
-								<img
-									src={avatarUrl}
-									alt=""
-									class="size-4 shrink-0 rounded-xs me-1"
-									loading="lazy"
-									fetchpriority="low"
-								/>
-							)}
-							<span>
-								{name}
-								{since &&
-									(until ? ` from ${since} to ${until}` : ` since ${since}`)}
-							</span>
-						</a>
-					))}
+					{users.map(
+						({ name, href, avatarUrl, since, until, avatarColors }) => (
+							<a
+								href={href}
+								class="inline-flex items-center hover:underline px-2 py-0.5 rounded-xs bg-skywardmc-offwhite dark:bg-skywardmc-offgray"
+								style={
+									avatarColors
+										? `background-color: ${avatarColors.background}; color: ${avatarColors.foreground}`
+										: undefined
+								}
+							>
+								{avatarUrl && (
+									<img
+										src={avatarUrl}
+										srcset={avatarSrcSet(avatarUrl)}
+										alt=""
+										class="size-4 shrink-0 rounded-xs me-1"
+										loading="lazy"
+										fetchpriority="low"
+									/>
+								)}
+								<span>
+									{name}
+									{since &&
+										(until ? ` from ${since} to ${until}` : ` since ${since}`)}
+								</span>
+							</a>
+						),
+					)}
 				</div>
 			</div>
 		))

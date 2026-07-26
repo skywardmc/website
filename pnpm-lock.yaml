@@ -49,6 +49,9 @@ importers:
       astro-pagefind:
         specifier: ^1.8.6
         version: 1.8.6(astro@6.4.6(@types/node@25.9.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.62.0))
+      colorthief:
+        specifier: ^3.4.0
+        version: 3.4.0(sharp@0.35.1)
       prettier:
         specifier: ^3.8.4
         version: 3.8.4
@@ -1801,6 +1804,18 @@ packages:
       {
         integrity: sha512-loKTxY1zCOuG4j9f6EPnuyyYkf58RnhhWTvRoZEokgB+WbdXehfjFviyOVYkqzEWz1Q5kRiZdBYS5SwxbQYwzw==,
       }
+
+  colorthief@3.4.0:
+    resolution:
+      {
+        integrity: sha512-mwXc0OHLsb1on2JtVD2go31GTyHwBLtkRruggz6H/bY2vI1mL8v8Mvam9qIWiI4khnsbQXoBs8M+EofnlcQitQ==,
+      }
+    hasBin: true
+    peerDependencies:
+      sharp: ">=0.33.0"
+    peerDependenciesMeta:
+      sharp:
+        optional: true
 
   comma-separated-tokens@2.0.3:
     resolution:
@@ -4979,6 +4994,10 @@ snapshots:
   clsx@2.1.1: {}
 
   collapse-white-space@2.1.0: {}
+
+  colorthief@3.4.0(sharp@0.35.1):
+    optionalDependencies:
+      sharp: 0.35.1
 
   comma-separated-tokens@2.0.3: {}
 
