@@ -154,9 +154,12 @@ const usersClass =
 									/>
 								)}
 								<span>
-									{name}
-									{since &&
-										(until ? ` from ${since} to ${until}` : ` since ${since}`)}
+									{name +
+										(since
+											? until
+												? `, from ${since} to ${until}`
+												: `, since ${since}`
+											: "")}
 								</span>
 							</a>
 						),
