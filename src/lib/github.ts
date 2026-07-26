@@ -1,5 +1,4 @@
 import { cached } from "./cache";
-import { sizedAvatarUrl } from "./avatar";
 
 const API = "https://api.github.com";
 const contributorCache = new Map<string, Promise<string[]>>();
@@ -67,7 +66,7 @@ async function loadGitHubUser(username: string): Promise<GitHubUser> {
 		username: user.login,
 		name: user.name ?? user.login,
 		href: user.html_url,
-		avatarUrl: sizedAvatarUrl(user.avatar_url),
+		avatarUrl: user.avatar_url,
 	};
 }
 

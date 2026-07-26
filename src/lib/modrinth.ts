@@ -1,5 +1,4 @@
 import { cached } from "./cache";
-import { sizedAvatarUrl } from "./avatar";
 
 const API = "https://api.modrinth.com/v2";
 const VERSION_LIMIT = 8;
@@ -75,9 +74,7 @@ async function loadModrinthAuthors(pack: string): Promise<ModrinthAccount[]> {
 		for (const member of team) {
 			accounts.set(`user:${member.user.id}`, {
 				name: member.user.username,
-				avatarUrl: member.user.avatar_url
-					? sizedAvatarUrl(member.user.avatar_url)
-					: undefined,
+				avatarUrl: member.user.avatar_url ?? undefined,
 				href: `https://modrinth.com/user/${member.user.username}`,
 			});
 		}

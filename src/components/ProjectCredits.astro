@@ -1,5 +1,7 @@
 ---
-import { avatarSrcSet, getAvatarColors } from "../lib/avatar";
+import { Image } from "astro:assets";
+
+import { getAvatarColors } from "../lib/avatar";
 import { getGitHubContributors, getGitHubUsers } from "../lib/github";
 import { getModrinthAuthors } from "../lib/modrinth";
 
@@ -144,9 +146,12 @@ const usersClass =
 								}
 							>
 								{avatarUrl && (
-									<img
+									<Image
 										src={avatarUrl}
-										srcset={avatarSrcSet(avatarUrl)}
+										width={16}
+										height={16}
+										densities={[1, 2]}
+										layout="none"
 										alt=""
 										class="size-4 shrink-0 rounded-xs me-1"
 										loading="lazy"

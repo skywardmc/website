@@ -12,6 +12,12 @@ export default defineConfig({
 	site: "https://skywardmc.org",
 	image: {
 		layout: "full-width",
+		remotePatterns: [
+			{ protocol: "https", hostname: "githubusercontent.com" },
+			{ protocol: "https", hostname: "**.githubusercontent.com" },
+			{ protocol: "https", hostname: "modrinth.com" },
+			{ protocol: "https", hostname: "**.modrinth.com" },
+		],
 	},
 	vite: {
 		plugins: [tailwindcss()],
