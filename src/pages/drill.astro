@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import GitHubUser from "../components/GitHubUser.astro";
+import ProjectCredits from "../components/ProjectCredits.astro";
+import { projects } from "../lib/projects";
 ---
 
 <Layout
@@ -8,11 +9,6 @@ import GitHubUser from "../components/GitHubUser.astro";
 	description="Drill is a modern, open-source alternative to OptiFine for NeoForge."
 	style="drill"
 >
-	<img
-		alt="Drill logo"
-		src="https://raw.githubusercontent.com/skywardmc/art/refs/heads/main/drill/logo_vector.svg"
-		class="not-prose ms-4 float-end size-24 sm:size-32 rounded-sm"
-	/>
 	<section class="prose prose-skywardmc dark:prose-invert max-w-full">
 		<p>
 			Drill is a modpack, developed for NeoForge, designed as an alternative to
@@ -30,10 +26,5 @@ import GitHubUser from "../components/GitHubUser.astro";
 			through Drill's <a href="https://modrinth.com/project/drill">Modrinth</a> page.
 		</p>
 	</section>
-	<p class="mt-4 text-sm flex items-center justify-end gap-1">
-		Maintained by <GitHubUser user="omo50" class="font-bold" /> and <GitHubUser
-			user="MenacingPerson"
-			class="font-bold"
-		/>
-	</p>
+	<ProjectCredits {...projects.drill} align="end" />
 </Layout>

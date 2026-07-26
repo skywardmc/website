@@ -1,0 +1,154 @@
+---
+import { getGitHubContributors, getGitHubUsers } from "../lib/github";
+import { getModrinthAuthors } from "../lib/modrinth";
+
+interface Props {
+	icon: string;
+	project: string;
+	repo: string;
+	pack: string;
+	maintainers: { user: string; since: number; until?: number }[];
+	align?: "start" | "center" | "end";
+	divider?: "top" | "bottom" | false;
+	showIntroduction?: boolean;
+}
+
+interface CreditUser {
+	name: string;
+	href: string;
+	avatarUrl?: string;
+	since?: number;
+	until?: number;
+}
+
+const {
+	icon,
+	project,
+	repo,
+	pack,
+	maintainers,
+	align = "start",
+	divider = false,
+	showIntroduction = false,
+} = Astro.props;
+const [contributorNames, authors] = await Promise.all([
+	getGitHubContributors(repo),
+	getModrinthAuthors(pack),
+]);
+const maintainerDates = new Map(
+	maintainers.map(({ user, ...dates }) => [user.toLowerCase(), dates]),
+);
+const githubUsers = await getGitHubUsers([
+	...maintainerDates.keys(),
+	...contributorNames,
+]);
+const creditSections: { label: string; users: CreditUser[] }[] = [
+	{
+		label: "Maintained by...",
+		users: githubUsers
+			.filter(({ username }) => maintainerDates.has(username.toLowerCase()))
+			.map(({ username, ...user }) => ({
+				...user,
+				...maintainerDates.get(username.toLowerCase()),
+			})),
+	},
+	{
+		label: "Contributed to by...",
+		users: githubUsers.filter(
+			({ username }) => !maintainerDates.has(username.toLowerCase()),
+		),
+	},
+	{
+		label:
+			"Special thanks to these amazing people, who make " +
+			project +
+			" possible...",
+		users: authors,
+	},
+].filter(({ users }) => users.length > 0);
+const sectionClass =
+	align === "end"
+		? "mt-4 text-end flex flex-col gap-4"
+		: align === "center"
+			? "mt-4 text-center flex flex-col gap-4"
+			: "mt-4 text-start flex flex-col gap-4";
+const usersClass =
+	align === "end"
+		? "flex flex-wrap items-end justify-end text-sm gap-2"
+		: align === "center"
+			? "flex flex-wrap items-center justify-center text-sm gap-2"
+			: "flex flex-wrap items-start justify-start text-sm gap-2";
+---
+
+{divider === "top" && <hr />}
+
+<div class="not-prose">
+	{
+		showIntroduction && (
+			<div
+				class={
+					align === "end"
+						? "flex items-center justify-end gap-4"
+						: align === "center"
+							? "flex items-center justify-center gap-4"
+							: "flex items-center justify-start gap-4"
+				}
+			>
+				<img
+					src={icon}
+					alt={`${project} icon`}
+					class:list={["size-12 rounded-sm", align === "end" && "order-last"]}
+					loading="lazy"
+					fetchpriority="low"
+				/>
+				<p
+					class={
+						align === "end"
+							? "max-w-lg text-end text-sm"
+							: align === "center"
+								? "max-w-lg text-center text-sm"
+								: "max-w-lg text-start text-sm"
+					}
+				>
+					{project} is an open-source, community-run project only made possible
+					by the wonderfully talented Minecraft modding community!
+				</p>
+			</div>
+		)
+	}
+
+	{
+		creditSections.map(({ label, users }) => (
+			<div class={sectionClass}>
+				<p>
+					<strong>{label}</strong>
+				</p>
+				<div class={usersClass}>
+					{users.map(({ name, href, avatarUrl, since, until }) => (
+						<a
+							href={href}
+							class="inline-flex items-center hover:underline px-2 py-0.5 rounded-xs bg-skywardmc-offwhite dark:bg-skywardmc-offgray"
+						>
+							{avatarUrl && (
+								<img
+									src={avatarUrl}
+									alt=""
+									class="size-4 shrink-0 rounded-xs me-1"
+									loading="lazy"
+									fetchpriority="low"
+								/>
+							)}
+							<span>
+								{name}
+								{since &&
+									(until ? ` from ${since} to ${until}` : ` since ${since}`)}
+							</span>
+						</a>
+					))}
+				</div>
+			</div>
+		))
+	}
+</div>
+
+{divider === "bottom" && <hr />}

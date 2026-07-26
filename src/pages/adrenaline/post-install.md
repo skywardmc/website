@@ -9,17 +9,30 @@ Out of the box, Adrenaline should be good enough for most people. However, this 
 
 ## Performance mods to take a look at
 
-There are some performance mods that Adrenaline does not come with, which you may want to take a look at after installation. Typically these mods are not included because they are either too experimental, cause many issues regarding mod compatibility, break/modify Vanilla features, or other reasons.
+There are some performance mods that Adrenaline does not come with, which you may want to take a look at after installation. These mods are not included because they are either experimental, cause many issues regarding compatibility, break/modify Vanilla features, or other reasons.
 
-- **[C2ME OpenCL Acceleration Module](https://modrinth.com/mod/c2me-ocl)**: Experimental C2ME addon that provides hardware accelerated world generation through OpenCL. Expect major improvements on compatible GPUs. Will likely have significant compatibility issues with worldgen mods.
-- **[Nvidium](https://modrinth.com/mod/nvidium)**: Replacement rendering backend for Sodium that uses Nvidia-only OpenGL extensions to increase FPS by a significant amount. There is a [fork of Nvidium maintained by drouarb](https://github.com/drouarb/nvidium) that works on current Sodium versions, but _please keep in mind that it is in beta_.
-- **[Immersive Optimization](https://modrinth.com/mod/immersive-optimization)**: Entity tick scheduler that aims to improve logic performance. Not included out of the box as it could cause issues with Vanilla parity. Generally can provide significant benefits in large content modpacks.
-- **[Sepals](https://modrinth.com/mod/sepals)**: An experimental optimization mod for improving logic performance. Not included as it is too experimental and does not guarantee vanilla parity.
+### Rendering optimizations
+
+These mods only operate client-side.
+
+- **[Gnetum](https://modrinth.com/mod/gnetum)**: Distribute HUD updates over multiple frames to improve performance. Not included as, in the case of an undiscovered incompatibility issue, the mod can cause intense flickering which is bad for those with photosensitivity.
+- **[Nvidium](https://modrinth.com/mod/nvidium)**: Replacement rendering backend for Sodium that uses Nvidia-only OpenGL extensions to increase FPS by a significant amount. Not included as it is currently considered a beta, as of writing.
+
+### Logic optimizations
+
+These mods only operate server-side or in singleplayer.
+
+- **[Alternate Current](https://modrinth.com/mod/alternate-current)**: Reduces the lag caused by redstone dust, optimizing the power calculations and reducing the number of shape and block updates emitted. Not included as it does not guarantee vanilla parity.
+- **[C2ME OpenCL Acceleration Module](https://modrinth.com/mod/c2me-ocl)**: Experimental C2ME addon that provides hardware accelerated world generation through OpenCL. May have significant issues with worldgen mods.
+- **[Immersive Optimization](https://modrinth.com/mod/immersive-optimization)**: Entity tick scheduler that aims to improve logic performance. Not included as it could cause issues with Vanilla parity. Generally can provide significant benefits in large content modpacks.
 - **[Moonrise](https://modrinth.com/mod/moonrise-opt)**: An official port of several Paper patches to Fabric. Supersedes several mods such as C2ME, ScalableLux, and Noisium. Not included out of the box as it is [incompatible with a wide variety of mods](https://github.com/Tuinity/Moonrise/issues).
-- **[TT20](https://modrinth.com/mod/tt20)**: Recalculates the amount of ticks that something takes based on the TPS. Not included out of the box as it has a couple issues regarding [breaking Vanilla features](https://github.com/snackbag/tt20/issues).
-- **[ThreadTweak](https://modrinth.com/mod/threadtweak)**: Only needed if you notice stutters when generating chunks. Otherwise, ThreadTweak is likely not needed and could possibly reduce performance in a couple scenarios. If you do not want to use ThreadTweak, there are other mods that do the same thing, such as [StutterFix](https://modrinth.com/mod/stutterfix), or using the `mixin.perf.thread_priorities` mixin in ModernFix.
+- **[Potatoptimize](https://modrinth.com/plugin/potatoptimize)**: Optimization mod that pools some patches from Paper and the author's own optimizations. Not included as it does not guarantee vanilla parity.
+- **[Sepals](https://modrinth.com/mod/sepals)**: An experimental optimization mod for improving logic performance. Not included as it is too experimental and does not guarantee vanilla parity.
+- **[TT20](https://modrinth.com/mod/tt20)**: Recalculates the amount of ticks that something takes based on the TPS, to improve the experience when the server is lagging. Not included as it has a couple issues regarding [breaking Vanilla features](https://github.com/snackbag/tt20/issues).
 
-There are also a few other mods which focus on optimizations that do not improve actual gameplay performance, rather, they speed up other parts of the game. These are considered out of scope for Adrenaline, as Adrenaline's main goal is to only focus on rendering/logic performance and memory usage. If you have opinions on expanding Adrenaline's scope to include these mods, [let us know here](https://github.com/skywardmc/adrenaline/issues/73#issuecomment-4052787021).
+### Other optimizations
+
+These do not improve actual gameplay performance, rather, they speed up other parts of the game. These are considered out of scope for Adrenaline, as Adrenaline's main goal is to only focus on rendering/logic performance and memory usage. If you have opinions on expanding Adrenaline's scope to include these mods, [let us know here](https://github.com/skywardmc/adrenaline/issues/73#issuecomment-4052787021). These _are_ included out of the box in Additive.
 
 - **[Fast IP Ping](https://modrinth.com/mod/fast-ip-ping)**: Improves server info lookup time for literal IP server addresses.
 - **[FastQuit](https://modrinth.com/mod/fastquit)**: Allows you to instantly quit the world and let it save in the background.

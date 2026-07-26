@@ -27,7 +27,7 @@ Both are great options, but we differ in philosophies:
 
 Yes, _you can_! Feel free to use this in any way you want! You don't **have** to give credit - after all it's just a Minecraft modpack, but I spend lots of time maintaining this and it's much appreciated. Also, I would prefer you not to include this project's name (for example, something like "Additive Plus") or a similar icon (like changing colors of the current icon) in the fork as it could confuse users and can make it seem like I endorse it.
 
-**If you are building a modpack with a large amount of content then I would heavily advise that you base it off [Adrenaline](/adrenaline) instead. Doing so would give you much better control over the QoL mods available and would prevent mod conflicts. It may also run better. It'll also be less confusing to update and keep in sync in the future, as Adrenaline gets far less internal changes than Additive does.**
+**If you are building a modpack with a large amount of content then I would heavily advise that you base it off [Adrenaline](/adrenaline) instead. Doing so would give you much better control over the QoL mods available and would prevent mod conflicts. It'll also be less confusing to update and keep in sync in the future, as Adrenaline gets far less internal changes than Additive does.**
 
 **If you're building a modpack off Additive and publishing it, please be sure to change Crash Assistant's config to match your project, such as the Discord links and strings.**
 

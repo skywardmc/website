@@ -5,7 +5,7 @@ description: "All of the changes that Adrenaline makes to mods and Vanilla confi
 style: "adrenaline"
 ---
 
-Most mods are fine out of the box and don't typically need tweaking. They're already tuned well. However, some mods, such as ModernFix, offer nice optimizations that are disabled by default for mod compatibility, which we enable. Here's a full summary of what we change out of the box.
+Most mods are fine out of the box and don't typically need tweaking. They're already tuned well. However, some mods offer optimizations that are disabled by default for mod compatibility, which we enable. Here's a full summary of what we change out of the box.
 
 **If you are making a modpack, you may want to disable the ModernFix mixins to prevent possible issues with certain content mods.**
 
@@ -31,13 +31,6 @@ Most mods are fine out of the box and don't typically need tweaking. They're alr
   - `mixin.perf.faster_item_rendering` to `true`
 - Very Many Players _(server)_
   - `show_async_loading_messages` to `false`
-
-## 1.21.1 specific
-
-- Enhanced Block Entities
-  - `*_AO` to true
-- Sodium Leaf Culling
-  - `leaf_culling_quality` from `"SOLID_AGGRESSIVE"` to `"SOLID"`
 
 ## 1.20.1 specific
 

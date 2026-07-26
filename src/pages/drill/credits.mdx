@@ -1,0 +1,11 @@
+---
+layout: "../../layouts/WikiPage.astro"
+title: "Credits"
+description: "Credits for Drill."
+style: "drill"
+---
+
+import ProjectCredits from "../../components/ProjectCredits.astro";
+import { projects } from "../../lib/projects";
+
+<ProjectCredits {...projects.drill} align="start" showIntroduction />

@@ -25,7 +25,7 @@ Crash Assistant helps you analyze crash logs, and also makes it easier for users
 
 ### What about Mod Menu?
 
-Yes, Mod Menu is a QoL mod. However, it's a mod that 90% of people will install after installing Adrenaline anyway, and it's also the only way to access Config Manager's overwrite/reset features. It can also be very nice for configuring certain mods without having to restart the game.
+Yes, Mod Menu is a QoL mod. However, it's a mod that 90% of people will install after installing Adrenaline anyway, and it's also the only way to access Config Manager's overwrite/reset features. It can also be very nice for configuring certain mods without having to restart the game. In really any modded instance I would consider it a pretty terrible UX to not have a way to see or configure mods.
 
 In Adrenaline, it's been intentionally configured to be out of your way. The button type is set to "Icon", so it doesn't shift around any menus, and the update check is off.
 

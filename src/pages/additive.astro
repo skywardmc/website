@@ -1,7 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import ProjectHero from "../components/ProjectHero.astro";
-import GitHubUser from "../components/GitHubUser.astro";
+import ProjectCredits from "../components/ProjectCredits.astro";
+import { projects } from "../lib/projects";
 ---
 
 <Layout
@@ -72,7 +73,5 @@ import GitHubUser from "../components/GitHubUser.astro";
 			> page.
 		</p>
 	</section>
-	<p class="mt-4 text-sm flex items-center justify-end gap-1">
-		Maintained by <GitHubUser user="intergrav" class="font-bold" />
-	</p>
+	<ProjectCredits {...projects.additive} align="end" />
 </Layout>
