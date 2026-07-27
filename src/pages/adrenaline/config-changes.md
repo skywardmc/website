@@ -15,7 +15,7 @@ Most mods are fine out of the box and don't typically need tweaking. They're alr
   - `simulationDistance` from `12` to `8`
 - Dynamic FPS
   - `states.*.volume_multipliers` to `1.0`
-  - `states.unfocused.frame_rate_target` from `1` to `2`
+  - `states.unfocused.frame_rate_target` from `1` to `10`
   - `states.invisible.run_garbage_collector` to `true`
 - FerriteCore
   - `useSmallThreadingDetector` to `true`
