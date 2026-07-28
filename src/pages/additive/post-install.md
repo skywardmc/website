@@ -36,7 +36,7 @@ These mods only run in singleplayer or server-side.
 
 Please see <https://exa.y2k.diy/garden/jvm-args> for information on JVM arguments, what Java distribution you should use for Minecraft, and how much memory you should allocate to the game.
 
-Thanks to Adrenaline's memory optimizations, this modpack can run with memory allocations as low as 512MB, and possibly even lower, but it's not recommended to go below 1GB. 2-4GB is fine for most lightly modded instances such as Adrenaline and Additive.
+This modpack can run with memory allocations as low as 512MB, and possibly even lower thanks to Adrenaline's memory optimizations, but it's not recommended to go below 1GB. 2-4GB is fine for most lightly modded instances such as Adrenaline and Additive.
 
 ## Important game settings to keep note of
 
@@ -44,7 +44,8 @@ By default, Additive does **not** change any of Minecraft's quality/graphics set
 
 - General
   - **Render Distance**: Affects how far you can see in the distance. If you are playing on multiplayer, servers have a limit. This has a high impact on render performance.
-  - **Simulation Distance**: Distance at which entities, blocks, fluids, etc are ticked. Setting this below 8 may affect mob spawning behavior. This has a high impact on logic performance (singleplayer only).
+  - **Simulation Distance**: Distance at which entities, blocks, fluids, etc are ticked. Setting this below 8 may affect mob spawning behavior. This has a high impact on logic performance.
+  - **Graphics API** (mc26.2+): Prefer either OpenGL or Vulkan. Vulkan support is currently in beta, and may cause problems. Vulkan typically offers better performance on many devices.
 - Quality
   - **Improved Transparency/Fabulous graphics**: This has a very high impact on render performance. Generally not recommended unless you really want it.
   - **Entity Distance**: How far you can see entities in the distance. This has a high impact on render performance.

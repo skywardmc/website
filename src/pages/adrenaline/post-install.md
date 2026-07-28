@@ -54,6 +54,7 @@ By default, Adrenaline does **not** change any of Minecraft's quality/graphics s
 - General
   - **Render Distance**: Affects how far you can see in the distance. If you are playing on multiplayer, servers have a limit. This has a high impact on render performance.
   - **Simulation Distance**: Distance at which entities, blocks, fluids, etc are ticked. Setting this below 8 may affect mob spawning behavior. This has a high impact on logic performance (singleplayer only).
+  - **Graphics API** (mc26.2+): Prefer either OpenGL or Vulkan. Vulkan support is currently in beta, and may cause problems. Vulkan typically offers better performance on many devices.
 - Quality
   - **Improved Transparency/Fabulous graphics**: This has a very high impact on render performance. Generally not recommended unless you really want it.
   - **Entity Distance**: How far you can see entities in the distance. This has a high impact on render performance.
