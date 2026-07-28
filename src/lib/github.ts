@@ -1,6 +1,12 @@
 import { cached } from "./cache";
 
 const API = "https://api.github.com";
+const headers = {
+	Accept: "application/vnd.github+json",
+	...(process.env.GITHUB_TOKEN
+		? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` }
+		: {}),
+};
 const contributorCache = new Map<string, Promise<string[]>>();
 const userCache = new Map<string, Promise<GitHubUser>>();
 
@@ -18,9 +24,7 @@ async function loadGitHubContributors(repo: string): Promise<string[]> {
 	const contributors: string[] = [];
 
 	while (url) {
-		const response = await fetch(url, {
-			headers: { Accept: "application/vnd.github+json" },
-		});
+		const response = await fetch(url, { headers });
 
 		if (!response.ok) {
 			throw new Error(`GitHub API request failed (${response.status}): ${url}`);
@@ -45,9 +49,7 @@ export function getGitHubContributors(repo: string): Promise<string[]> {
 }
 
 async function loadGitHubUser(username: string): Promise<GitHubUser> {
-	const response = await fetch(`${API}/users/${username}`, {
-		headers: { Accept: "application/vnd.github+json" },
-	});
+	const response = await fetch(`${API}/users/${username}`, { headers });
 
 	if (!response.ok) {
 		throw new Error(
