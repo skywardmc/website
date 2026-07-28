@@ -1,4 +1,8 @@
 ---
+import { execFileSync } from "node:child_process";
+import { existsSync } from "node:fs";
+import { Icon } from "astro-icon/components";
+
 const sections = [
 	{
 		path: "/adrenaline",
@@ -57,13 +61,35 @@ const sections = [
 		links: [],
 	},
 ];
+
+const sourcePath = ["md", "mdx"]
+	.map(
+		(extension) =>
+			`src/pages/${Astro.url.pathname.replace(/^\/+|\/+$/g, "")}.${extension}`,
+	)
+	.find((path) => existsSync(path));
+
+let commit: { author: string; date: string; hash: string } | undefined;
+if (sourcePath) {
+	try {
+		const [author, date, hash] = execFileSync(
+			"git",
+			["log", "-1", "--format=%an%n%aI%n%H", "--", sourcePath],
+			{ encoding: "utf8" },
+		)
+			.trim()
+			.split("\n");
+
+		if (author && date && hash) commit = { author, date, hash };
+	} catch {}
+}
 ---
 
 <aside
-	class="md:w-48 p-6 px-4 sm:px-6 md:ps-0 sm:rounded-sm md:rounded-none md:rounded-r-sm bg-skywardmc-white dark:bg-skywardmc-black sm:dark:bg-skywardmc-gray"
+	class="flex flex-col gap-4 md:w-48 p-6 px-4 sm:px-6 md:ps-0 sm:rounded-sm md:rounded-none md:rounded-r-sm bg-skywardmc-white dark:bg-skywardmc-black sm:dark:bg-skywardmc-gray"
 	id="sidebar"
 >
-	<h1 class="text-xl pb-4 font-bold">Pages</h1>
+	<h1 class="text-xl font-bold">Pages</h1>
 	<nav class="flex flex-col gap-1">
 		{
 			sections
@@ -86,4 +112,31 @@ const sections = [
 				))
 		}
 	</nav>
+	{
+		sourcePath && (
+			<div class="flex flex-col gap-2 text-xs text-end">
+				{commit && (
+					<a
+						href={`https://github.com/skywardmc/skywardmc.org/commit/${commit.hash}`}
+						class="opacity-75"
+					>
+						Last edit: {commit.author}
+						<time class="block" datetime={commit.date}>
+							{new Date(commit.date).toLocaleString("en-US", {
+								dateStyle: "medium",
+								timeStyle: "short",
+							})}
+						</time>
+					</a>
+				)}
+				<a
+					href={`https://github.com/skywardmc/skywardmc.org/edit/main/${sourcePath}`}
+					class="flex items-center justify-end gap-2 rounded-xs opacity-50"
+				>
+					<Icon name="lucide:pen-line" />
+					Edit this page
+				</a>
+			</div>
+		)
+	}
 </aside>
