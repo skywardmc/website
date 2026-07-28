@@ -5,18 +5,18 @@ description: "Troubleshooting information for Additive."
 style: "additive"
 ---
 
-Experiencing issues with other added mods?
-
 ## Mod incompatibilities
 
-In [ModernFix](https://modrinth.com/mod/modernfix), the [Dynamic Resources](https://github.com/embeddedt/ModernFix/wiki/Dynamic-Resources-FAQ) mixin is enabled by default that can reduce load times and improve memory usage, however it can possibly break some content mods. If you experience any issues, simply try removing the `mixin.perf.dynamic_resources` override in the `modernfix-mixins.properties` config file.
+We generally try to not include mods, or features of mods, that cause many incompatibilities. However, in some cases we do if they are worth it for the average player:
 
-There are also other ModernFix mixins which are enabled by default, which can cause issues with mod compatibility. Try disabling those as well.
-
-## Experiencing GUI issues
-
-If you are experiencing issues with GUI, try disabling ImmediatelyFast. ImmediatelyFast optimizes various parts of the immediate mode rendering code, which includes UI.
+- [ModernFix](https://modrinth.com/mod/modernfix)'s `mixin.perf.dynamic_resources` feature significantly improves memory usage, but is commonly incompatible with content mods. The result is typically broken textures or crashes. You can disable this in `modernfix-mixins.properties`
+  - [See ModernFix's issue tracker](https://github.com/embeddedt/ModernFix/issues)
+- [C2ME](https://modrinth.com/mod/c2me-fabric) significantly improves chunk performance, but has known incompatibilities
+  - [TeamTwilight/twilightforest#2318](https://github.com/TeamTwilight/twilightforest/pull/2318)
+  - [See C2ME's issue tracker](https://github.com/RelativityMC/C2ME-fabric/issues)
+- Entity Culling may possibly have some compatibility issues with certain mods
+  - [See Entity Culling's issue tracker](https://github.com/tr7zw/EntityCulling/issues)
 
 ## Having other issues
 
-Join our [Discord server](/discord) and I (or community members) can try to help with your issue as long as I'm not busy.
+You can ask for help in our support channels on [Discord](/discord) or [Matrix](/matrix). Please keep in mind that support is completely volunteer-based and you may not get a response immediately or at all.

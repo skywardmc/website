@@ -15,8 +15,9 @@ There are some performance mods that Additive does not come with, which you may 
 
 These mods only run client-side, in singleplayer and multiplayer.
 
-- **[Gnetum](https://modrinth.com/mod/gnetum)**: Distribute HUD updates over multiple frames to improve performance. Not included as, in the case of an undiscovered incompatibility issue, the mod can cause intense flickering which can be horrible for those with photosensitivity.
-- **[Nvidium](https://modrinth.com/mod/nvidium)**: Replacement rendering backend for Sodium that uses Nvidia-only OpenGL extensions to increase FPS by a significant amount. There is a [fork of Nvidium maintained by drouarb](https://github.com/drouarb/nvidium) that works on current Sodium versions, but _please keep in mind that it is in beta_.
+- **[AsyncParticles](https://modrinth.com/mod/asyncparticles)**: Various particle optimizations. AsyncParticles may be a little faster than the included Particle Core. However, it has known compatibility issues and can cause problems.
+- **[Gnetum](https://modrinth.com/mod/gnetum)**: Distribute HUD updates over multiple frames to improve performance. Not included as, in the case of an undiscovered incompatibility issue, the mod can cause intense flickering which is bad for those with photosensitivity.
+- **[Nvidium](https://modrinth.com/mod/nvidium)**: Replacement rendering backend for Sodium that uses Nvidia-only OpenGL extensions to increase FPS by a significant amount. It is currently considered a beta, so it's not included out of the box.
 
 ### Logic optimizations
 
@@ -25,6 +26,7 @@ These mods only run in singleplayer or server-side.
 - **[Alternate Current](https://modrinth.com/mod/alternate-current)**: Reduces the lag caused by redstone dust, optimizing the power calculations and reducing the number of shape and block updates emitted. Not included as it does not guarantee vanilla parity.
 - **[C2ME OpenCL Acceleration Module](https://modrinth.com/mod/c2me-ocl)**: Experimental C2ME addon that provides hardware accelerated world generation through OpenCL. May have significant issues with worldgen mods.
 - **[Immersive Optimization](https://modrinth.com/mod/immersive-optimization)**: Entity tick scheduler that aims to improve logic performance. Not included as it could cause issues with Vanilla parity. Generally can provide significant benefits in large content modpacks.
+- **[Jasione](https://modrinth.com/mod/jasione)**: Reduces memory allocation/GC pressure. Not included out of the box as it is a small micro-optimization that will likely not noticeably benefit in most cases, but this may help in large content modpacks.
 - **[Moonrise](https://modrinth.com/mod/moonrise-opt)**: An official port of several Paper patches to Fabric. Supersedes several mods such as C2ME, ScalableLux, and Noisium. Not included out of the box as it is [incompatible with a wide variety of mods](https://github.com/Tuinity/Moonrise/issues).
 - **[Potatoptimize](https://modrinth.com/plugin/potatoptimize)**: Optimization mod that pools some patches from Paper and the author's own optimizations. Not included as it does not guarantee vanilla parity.
 - **[Sepals](https://modrinth.com/mod/sepals)**: An experimental optimization mod for improving logic performance. Not included as it is too experimental and does not guarantee vanilla parity.
