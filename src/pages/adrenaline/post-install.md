@@ -16,7 +16,8 @@ There are some performance mods that Adrenaline does not come with, which you ma
 These mods only operate client-side.
 
 - **[Gnetum](https://modrinth.com/mod/gnetum)**: Distribute HUD updates over multiple frames to improve performance. Not included as, in the case of an undiscovered incompatibility issue, the mod can cause intense flickering which is bad for those with photosensitivity.
-- **[Nvidium](https://modrinth.com/mod/nvidium)**: Replacement rendering backend for Sodium that uses Nvidia-only OpenGL extensions to increase FPS by a significant amount. Not included as it is currently considered a beta, as of writing.
+- **[Nvidium](https://modrinth.com/mod/nvidium)**: Replacement rendering backend for Sodium that uses Nvidia-only OpenGL extensions to increase FPS by a significant amount. It is currently considered a beta, so it's not included out of the box.
+- **[AsyncParticles](https://modrinth.com/mod/asyncparticles)**: Various particle optimizations. AsyncParticles may be a little faster than the included Particle Core. However, it has known compatibility issues and can cause problems.
 
 ### Logic optimizations
 
