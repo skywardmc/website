@@ -48,6 +48,7 @@ export default defineConfig({
 	],
 	redirects: {
 		"/discord": "https://discord.gg/36Tv44cYte",
+		"/matrix": "https://matrix.to/#/#skywardmc:skywardmc.org",
 		"/project/adrenaline": "/adrenaline",
 		"/project/additive": "/additive",
 	},
