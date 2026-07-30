@@ -32,7 +32,7 @@ This page is a little less technical than Adrenaline's config changes page, as t
 ## 1.21.1+ specific
 
 - Cape Provider
-  - Adjust cape order to: MinecraftCapes, OptiFine
+  - Adjust cape order to: Sneaky Capes, MinecraftCapes, OptiFine, Cape Provider
 
 ## 1.20.1 specific
 
